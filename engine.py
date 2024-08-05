@@ -24,7 +24,7 @@ def train_step(model: torch.nn.Module,
         optimizer.step()
 
         running_loss += loss.item()
-        if i % 100 == 99:
+        if i % 10 == 9:
             last_loss = running_loss /10
             print(f'batch {i+1} loss: {last_loss}')
             running_loss = 0.
